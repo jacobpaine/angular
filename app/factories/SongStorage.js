@@ -6,6 +6,7 @@ function($q, $http) {
 
   function loadSongs () {
     return $q(function(resolve, reject) {
+      //Ajax get the songs
         $http.get('./data/songs.json')
         .success(
           function(objectFromJSONFile) {

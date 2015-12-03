@@ -3,17 +3,20 @@
     { 
       "title": "The Walk",
       "artist": "Mayer Hawthorne",
-      "album": "How Do You Do"
+      "album": "How Do You Do",
+      "year": "19??" 
     },
     {
       "title": "Medicine",
       "artist": "Grace Potter",
-      "album": "Grace Potter and the Nocturnals"      
+      "album": "Grace Potter and the Nocturnals",
+      "year": "19??"       
     },
     {
       "title": "Legs",
       "artist": "ZZ Top",
-      "album": "Eliminator"      
+      "album": "Eliminator",
+      "year": "19??"      
     }
   ]
 }

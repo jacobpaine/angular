@@ -6,8 +6,8 @@ app.config(['$routeProvider',
         templateUrl: 'partials/song-list.html',
         controller: 'SongCtrl'
       }).
-      when('/songs/list', {
-        templateUrl: 'partials/song-list.html',
+      when('/songs/form', {
+        templateUrl: 'partials/songForm.html',
         controller: 'SongFormCtrl'
       }).
      otherwise('/songs/list');
