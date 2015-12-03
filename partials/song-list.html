@@ -4,12 +4,12 @@
 	</div>
 
 	<div ng-repeat="song in songs | filter:query">
-	  	<p>
-		  	<a href="#/songs/{{ song.id }}">{{ song.title }}</a>
-		  	<a href="#/songs/{{ song.id }}">{{ song.artist }}</a>
-			<a href="#/songs/{{ song.id }}">{{ song.album }}</a>
-			<a href="#/songs/{{ song.id }}">{{ song.year }}</a>
-		</p>
+	<p>
+	  	<p><a href="#/songs/{{ song.id }}">{{ song.title }}</a></p>
+		<p><a href="#/songs/{{ song.id }}">{{ song.artist }}</a></p>
+		<p><a href="#/songs/{{ song.id }}">{{ song.album }}</a></p>
+		<p><a href="#/songs/{{ song.id }}">{{ song.year }}</a></p>
+	</p>
 	</div>
 
 </div>
