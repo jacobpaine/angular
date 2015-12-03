@@ -1,15 +1,97 @@
 <!doctype html>
 
-<html>
+<html lang="en">
+	<head>
+	  <meta charset="utf-8">
+	  <title>NSS Starter Kit - Angular</title>
+	  <link rel="stylesheet" type="text/css" href="styles/main.css">
+	</head>
+
+	<body ng-app="SongApp">
+
+	  <div ng-view></div>
+
+	  <!--<script src="lib/bower_components/jquery/dist/jquery.min.js"></script>-->
+	  <script src="lib/bower_components/angular/angular.min.js"></script>
+	  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+
+	  <script src="app/SongApp.js"></script>
+
+	  <script src="app/factories/SongStorage.js"></script>
+	  <script src="app/controllers/SongCtrl.js"></script>
+	  <script src="app/controllers/SongFormCtrl.js"></script>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+
+<html ng-app="TodoApp">
 
   <link rel="stylesheet" href="styles/responsive.css">
 
-  <article class="colors">
-    <span class="card-holder">
-      <section class="first">Block A</section>
-      <section class="second">Block B</section>
-      <section class="third">Block C</section>
-    </span>
-  </article>
+	<body> -->
 
-</html>
+<!-- This demonstrates Writing to the DOM -->
+<!-- 		<div ng-view></div>
+
+		<section ng-controller="TodoCtrl">
+
+			<h1> {{ title }} </h1>
+			<h2> {{ beer }} </h2> -->
+
+<!-- This demostrates Two-Way Binding -->
+			<!-- <div>
+			  <input type="text" ng-model="macaroni" />
+			  <div> {{ macaroni }} </div>
+			</div> -->
+
+<!-- This is effecively a loop that adds an event listener-->
+<!-- 
+			<div>
+		 	  <ul ng-repeat="todo in todos | filter: searchText">
+			    <li>{{ todo.name }} <button ng-click="killTodo(todo)">Finish</button></li>
+			  </ul>
+			</div>	 -->
+		
+<!-- Creates an input box that searches and filters, using the same list-->
+		<!-- 	<input type="text" ng-model="searchText" />
+			<div>
+			  <ul ng-repeat="todo in todos | filter: searchText">
+			    <li>{{todo.name}}</li>
+			  </ul>
+			</div> -->
+<!-- Groups the tasks. Value is specific to this statement (could be monkeybutt), 
+ -->
+ 			<!-- <div>
+			  Grouped tasks:
+			  <select
+			      ng-model="theTodo"
+			      ng-options="value.name group by value.complete for value in todos">
+			  </select>
+			</div>
+
+			<h3> {{ theToDo.name }} </h3>
+		</section>
+
+		<script src="lib/bower_components/angular/angular.min.js"></script>
+		<script src="lib/bower_components/angular-route/angular-route.js"></script>
+		<script src="app/Todo.js"></script>
+	</body>
+
+</html> -->

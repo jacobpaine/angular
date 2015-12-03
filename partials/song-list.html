@@ -1,0 +1,12 @@
+<div>
+	<div>
+	  <input type="text" ng-model="query" />
+	</div>
+
+	<div ng-repeat="song in songs">
+	  <p><a href="#/songs/{{ song.id }}">{{ song.title }}</a></p>
+	  <p><a href="#/songs/{{ song.id }}">{{ song.artist }}</a></p>
+	  <p><a href="#/songs/{{ song.id }}">{{ song.album }}</a></p>
+	</div>
+
+</div>
