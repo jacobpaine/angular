@@ -4,11 +4,12 @@
 	<head>
 	  <meta charset="utf-8">
 	  <title>NSS Starter Kit - Angular</title>
+	  <link href="animations.css" rel="stylesheet" type="text/css">
 	  <link rel="stylesheet" type="text/css" href="styles/main.css">
 	</head>
 
 	<nav>
-	  	<a href="#/songs/form">GOTO Add</a>
+		<a href="#/songs/form">GOTO Add</a>
 	  	<a href="#/songs/list">GOTO List</a>
 	</nav>
 
@@ -24,13 +25,27 @@
 		  </select>
 		</div>
 
+		<section ng-app="ngViewExample">
+		  <div ng-controller="MainCtrl as main">
+			  Choose:
+			  <a href="Book/Moby">Moby</a> |
+			  <a href="Book/Moby/ch/1">Moby: Ch1</a> |
+			  <a href="Book/Gatsby">Gatsby</a> |
+			  <a href="Book/Gatsby/ch/4?key=value">Gatsby: Ch4</a> |
+			  <a href="Book/Scarlet">Scarlet Letter</a><br/>
 
+			  <div class="view-animate-container">
+			    <div ng-view class="view-animate"></div>
+			  </div>
+		 	</div>
+		 </section>
 
 	  <script src="lib/bower_components/angular/angular.min.js"></script>
 	  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+	  <script src="lib/bower-components/angular-animate/angular-animate.min.js"></script>
 
 	  <script src="app/SongApp.js"></script>
-
+	  <script src="javascripts/script.js"></script>
 	  <script src="app/factories/SongStorage.js"></script>
 	  <script src="app/controllers/SongCtrl.js"></script>
 	  <script src="app/controllers/SongFormCtrl.js"></script>

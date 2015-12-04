@@ -22,6 +22,32 @@ function($q, $http) {
       }); 
   }
 
+
+
+
+  function loadSongs2 () {
+    return $q(function(resolve, reject) {
+      //Ajax get the songs
+        $http.get('./data/songs2.json')
+        .success(
+          function(objectFromJSONFile) {
+            /* 
+            Convert Firebase's object of objects into an array of objects, and store it in the private variable
+            */
+            console.log("objectFromJSONFile.songs2", objectFromJSONFile.songs2);
+            var varcat = objectFromJSONFile.songs2;
+            song_list = song_list.concat(varcat);
+            resolve(song_list);
+          }, function(error) {
+            reject(error);
+          }
+        );
+      }); 
+  }
+
+
+
+
   // Store the promise as a private variable
   var songPromise = loadSongs();
 
@@ -42,6 +68,11 @@ function($q, $http) {
       */
       return songPromise;
     },
+
+    loadSongs2: function(){
+      return loadSongs2();
+    },
+
     getSongs: function() {
       console.log("Factory returning all songs");
       return song_list;

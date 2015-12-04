@@ -12,6 +12,12 @@ app.controller("SongCtrl", ["$scope", "simple-songs",
       console.log("scope songs", a);
     })
 
+    $scope.clicker = function(){
+      simple.loadSongs2().then(function(b){
+        $scope.songs = b;
+      })
+    }
+
     $scope.addSong = function() {
       $scope.songs.$add({
         artist: $scope.newSong.artist,
