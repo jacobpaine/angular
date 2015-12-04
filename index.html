@@ -8,26 +8,19 @@
 	</head>
 
 	<nav>
-	  	<a href="#/songs/form">GOTO Add</a>
-	  	<a href="#/songs/list">GOTO List</a>
+	  	<a href="#/songs/form">Add</a>
+	  	<a href="#/songs/list">List</a>
 	</nav>
 
 	<body ng-app="SongApp">
 	  <div ng-view></div>
 
 
-		<div>
-		  Grouped tasks:
-		  <select
-		      ng-model="SongApp"
-		      ng-options="value.title group by value.complete for value in songs">
-		  </select>
-		</div>
 
-
-
-	  <script src="lib/bower_components/angular/angular.min.js"></script>
-	  <script src="lib/bower_components/angular-route/angular-route.min.js"></script>
+	  <script src="lib/bower_components/angular/angular.js"></script>
+	  <script src="lib/bower_components/angular-route/angular-route.js"></script>
+	  <script src="lib/bower_components/firebase/firebase.js"></script>
+	  <script src="lib/bower_components/angularfire/dist/angularfire.js"></script>
 
 	  <script src="app/SongApp.js"></script>
 

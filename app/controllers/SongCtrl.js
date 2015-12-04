@@ -1,26 +1,18 @@
-app.controller("SongCtrl", ["$scope", "simple-songs",
-  function($scope, simple) {
+app.controller("SongCtrl", 
+  ["$scope", 
+  "$firebaseArray",
+  function($scope, $firebaseArray) {
+    $scope.query = "";
 
-    /*
-      Add the following code
-    */
-    $scope.newSong = { artist: "", album: "", title: "", year:""};
+    var ref = new Firebase("https://yegodsandlittlefish.firebaseio.com/songs");
+    $scope.songs = $firebaseArray(ref);
+    console.log("$scope.songs",$scope.songs);
 
 
-    simple.loadSongs().then(function(a){
-      $scope.songs = a;
-      console.log("scope songs", a);
-    })
 
-    $scope.addSong = function() {
-      $scope.songs.$add({
-        artist: $scope.newSong.artist,
-        title: $scope.newSong.title,
-        album: $scope.newSong.album,
-        year: $scope.newSong.year
-      }); 
-    };
-  } 
+
+
+  }
 ]);
 
 
