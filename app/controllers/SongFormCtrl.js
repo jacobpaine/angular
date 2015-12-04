@@ -22,7 +22,6 @@ app.controller("SongFormCtrl",
       $scope.addMessage = function() {
         console.log('here\'s a click!');
         $scope.songs.$add({
-          text: $scope.newMessageText,
           artist: $scope.newSong.artist,
           title: $scope.newSong.title,
           album: $scope.newSong.album,
