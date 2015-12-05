@@ -6,18 +6,12 @@ app.controller("SongFormCtrl",
     function($scope, simple_songs, $firebaseArray) {
       
       var ref = new Firebase("https://yegodsandlittlefish.firebaseio.com/songs");
+      //newMessageText = default message when the add songs button is pressed
       $scope.newMessageText = "";
+      //Pass the firebase data (ref) into the $firebaseArray to make it play nice with NG, and scope it to songs 
       $scope.songs = $firebaseArray(ref);
       $scope.newSong = { artist: "", album: "", title: "", year: ""};
-      
-      // $scope.addSong = function() {
-      //   simple_songs.addSong({
-      //     artist: $scope.newSong.artist,
-      //     title: $scope.newSong.title,
-      //     album: $scope.newSong.album,
-      //     year: $scope.newSong.year
-      //   });
-      // };
+    
 
       $scope.addMessage = function() {
         console.log('here\'s a click!');

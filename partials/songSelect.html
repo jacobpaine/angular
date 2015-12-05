@@ -1,0 +1,7 @@
+<div>
+  Grouped tasks:
+  <select
+      ng-model="theTodo"
+      ng-options="value.name group by value.complete for value in todos">
+  </select>
+</div>
