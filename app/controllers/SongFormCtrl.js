@@ -6,7 +6,7 @@ app.controller("SongFormCtrl",
     function($scope, simple_songs, $firebaseArray) {
       
       var ref = new Firebase("https://yegodsandlittlefish.firebaseio.com/songs");
-      $scope.newMessageText = ""
+      $scope.newMessageText = "";
       $scope.songs = $firebaseArray(ref);
       $scope.newSong = { artist: "", album: "", title: "", year: ""};
       
