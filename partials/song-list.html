@@ -1,18 +1,32 @@
+<div ng-controller="SongCtrl">
+</div>
+
 <div>
 	<div>
 		<input type="text" ng-model="query" />
 	</div>
 
-	<div>
-	<div>
-		  Grouped tasks:
-		  <select
-		      ng-model="SongApp"
-		      ng-options="value.name group by value.complete for value in todos">
-		  </select>
-		</div>
-	</div>
 
+  <form name="myForm">
+
+    <!-- Drop down selector for Artist -->
+<select ng-model="searchArtist">
+	<option></option>
+	<option ng-repeat="thing in songs">{{thing.artist}}</option>
+	</select>
+
+	<p ng-repeat="thing in songs | filter: searchArtist">
+	<a href="#/songs/{{ song.id }}">{{thing.title}}</a> by <a href="#/songs/{{ song.id }}">{{ thing.artist}}</a> on the album <a href="#/songs/{{ song.id }}">{{thing.album}}</a>
+	<button ng-click="removeMessage(thing)">Delete a Song</button>
+	</p>
+
+
+</form>
+
+
+</div>
+
+  </form>
 
 	<div ng-repeat="song in songs | filter:query">
 	<p>
@@ -20,8 +34,6 @@
 		<a href="#/songs/{{ song.id }}">{{ song.album }}</a>
 		<a href="#/songs/{{ song.id }}">{{ song.title }}</a>
 		<a href="#/songs/{{ song.id }}">{{ song.year }}</a>
-
-		<button ng-click="removeMessage(song)">Delete a Song</button>
 	
 	</p>
 	</div>
